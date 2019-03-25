@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.8.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.5.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.8.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.3" />
     <PackageReference Include="Microsoft.Azure.CognitiveServices.ContentModerator" Version="2.0.0" />
     <PackageReference Include="Microsoft.Azure.CognitiveServices.Language" Version="1.0.1-preview" />
     <PackageReference Include="Microsoft.Bot.Builder" Version="4.3.1" />
@@ -34,27 +34,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Dialogs\Authentication\Resources\AuthenticationStrings.Designer.cs">
+    <Compile Update="Responses\Authentication\AuthenticationStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>AuthenticationStrings.resx</DependentUpon>
     </Compile>
-    <Compile Update="Dialogs\Cancel\Resources\CancelStrings.Designer.cs">
+    <Compile Update="Responses\Cancel\CancelStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>CancelStrings.resx</DependentUpon>
     </Compile>
-    <Compile Update="Dialogs\Escalate\Resources\EscalateStrings.Designer.cs">
+    <Compile Update="Responses\Escalate\EscalateStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>EscalateStrings.resx</DependentUpon>
     </Compile>
-    <Compile Update="Dialogs\Main\Resources\MainStrings.Designer.cs">
+    <Compile Update="Responses\Main\MainStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>MainStrings.resx</DependentUpon>
     </Compile>
-    <Compile Update="Dialogs\Onboarding\Resources\OnboardingStrings.Designer.cs">
+    <Compile Update="Responses\Onboarding\OnboardingStrings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>OnboardingStrings.resx</DependentUpon>
@@ -62,23 +62,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Dialogs\Cancel\Resources\CancelStrings.resx">
+    <EmbeddedResource Update="Responses\Cancel\CancelStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CancelStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Dialogs\Escalate\Resources\EscalateStrings.resx">
+    <EmbeddedResource Update="Responses\Escalate\EscalateStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>EscalateStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Dialogs\Main\Resources\MainStrings.resx">
+    <EmbeddedResource Update="Responses\Main\MainStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Dialogs\Onboarding\Resources\OnboardingStrings.resx">
+    <EmbeddedResource Update="Responses\Onboarding\OnboardingStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>OnboardingStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Dialogs\Authentication\Resources\AuthenticationStrings.resx">
+    <EmbeddedResource Update="Responses\Authentication\AuthenticationStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AuthenticationStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -91,22 +91,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Dialogs\Main\Resources\Intro.de.json">
+    <Content Update="Content\Intro.de.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="Dialogs\Main\Resources\Intro.es.json">
+    <Content Update="Content\Intro.es.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="Dialogs\Main\Resources\Intro.fr.json">
+    <Content Update="Content\Intro.fr.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="Dialogs\Main\Resources\Intro.it.json">
+    <Content Update="Content\Intro.it.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="Dialogs\Main\Resources\Intro.json">
+    <Content Update="Content\Intro.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="Dialogs\Main\Resources\Intro.zh.json">
+    <Content Update="Content\Intro.zh.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

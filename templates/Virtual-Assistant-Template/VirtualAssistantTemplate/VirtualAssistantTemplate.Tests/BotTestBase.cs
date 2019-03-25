@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using Autofac;
-using VirtualAssistantTemplate;
-using VirtualAssistantTemplate.Dialogs.Onboarding;
-using VirtualAssistantTemplate.Middleware.Telemetry;
 using VirtualAssistantTemplate.Tests.LuisTestUtils;
 using VirtualAssistantTemplate.Tests.LUTestUtils;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Adapters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Bot.Builder.Solutions.Telemetry;
+using Microsoft.Bot.Builder.AI.QnA;
 
 namespace VirtualAssistantTemplate.Tests
 {
@@ -34,15 +33,22 @@ namespace VirtualAssistantTemplate.Tests
             TelemetryClient = new NullBotTelemetryClient();
             BotServices = new BotServices()
             {
-                DispatchRecognizer = DispatchTestUtil.CreateRecognizer(),
-                LuisServices = new Dictionary<string, ITelemetryLuisRecognizer>
+                CognitiveModelSets = new Dictionary<string, CognitiveModelSet>
                 {
-                    { "general", GeneralTestUtil.CreateRecognizer() }
-                },
-                QnAServices = new Dictionary<string, ITelemetryQnAMaker>
-                {
-                    { "faq", FaqTestUtil.CreateRecognizer() },
-                    { "chitchat", ChitchatTestUtil.CreateRecognizer() }
+                    { "en", new CognitiveModelSet()
+                        {
+                            DispatchService = DispatchTestUtil.CreateRecognizer(),
+                            LuisServices = new Dictionary<string, IRecognizer>
+                            {
+                                { "general", GeneralTestUtil.CreateRecognizer() }
+                            },
+                            QnAServices = new Dictionary<string, QnAMaker>
+                            {
+                                //{ "faq", FaqTestUtil.CreateRecognizer() },
+                                //{ "chitchat", ChitchatTestUtil.CreateRecognizer() }
+                            }
+                        }
+                    }
                 }
             };
 
